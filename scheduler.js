@@ -35,7 +35,6 @@ function fcfs(processes) {
     // Calculate orbital time for the executed process
     const turnaroundTime = currentTime - process.arrival;
 
-    console.log(process);
     // Push the executed process to the sequence
     executedProcesses.push({
       // process: process,
@@ -242,7 +241,7 @@ const processes = [
   { arrival: 3, burst: 100 },
 ];
 
-// all(fcfs(processes).executedProcesses);
-// all(sjf(processes).executedProcesses);
-all(rr(processes, 60));
+all(fcfs(processes));
+// all(sjf(processes));
+// all(rr(processes, 60));
 // printTimelineRR(processes, 60);
